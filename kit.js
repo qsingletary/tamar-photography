@@ -91,7 +91,7 @@ function viewer(o){
   const el = document.createElement('div');
   el.className = 'lb' + (o.halves?' halves':'') + (o.backdrop?' backdrop':'') + (o.clickNext?' clicknext':'');
   el.setAttribute('role','dialog'); el.setAttribute('aria-modal','true'); el.setAttribute('aria-label','Image viewer'); el.hidden = true;
-  const hint = o.mode==='scroll' ? 'Scroll to move' : o.halves ? 'Click left or right to move' : o.backdrop ? 'Click outside the photograph to close' : '';
+  const hint = o.mode==='scroll' ? 'Scroll to move' : o.halves ? 'Click left or right to move' : '';
   el.innerHTML = `<div class="lb-top"><span class="lb-t"></span><button type="button" class="lb-x">Close ×</button></div>` +
     (o.mode==='scroll' ? `<div class="lb-scroll"></div>` : `<div class="lb-stage"><button type="button" class="lb-pv" aria-label="Previous photograph">←</button><img class="lb-img" alt=""><button type="button" class="lb-nx" aria-label="Next photograph">→</button></div>`) +
     (o.strip ? `<div class="lb-strip"></div>` : '') +
